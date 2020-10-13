@@ -15,10 +15,13 @@ export const HomePage = () => {
       setIsOpen(!isOpen)
     }
   }
+  const closeSideBar = () => {
+    setIsOpen(false)
+  }
   return (
     <div className='wrap-content'>
       <header className={`${isOpen === null ? 'sidebar' : isOpen === true ? 'sidebar-show' : 'sidebar-hidden'} fixed`}>
-        <SideBar />
+        <SideBar closeSideBar={closeSideBar} />
       </header>
       <main
         className={`${

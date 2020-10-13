@@ -2,13 +2,29 @@ import React, { useState } from 'react'
 import avatar from '../../assets/avatar.jpg'
 import './SideBar.css'
 
-export const SideBar = () => {
+export const SideBar = ({ closeSideBar }) => {
   const [currentItem, setCurrentItem] = useState('home')
   const onClickChangeItem = (e) => {
     setCurrentItem(e.target.name)
   }
   return (
-    <section className='shadow-2xl flex flex-col justify-between text-white rounded-2lg bg-blue-1 w-60.625 h-155 p-7.5'>
+    <section className='shadow-2xl flex flex-col justify-between text-white rounded-2lg bg-blue-1 w-60.625 h-155 p-7.5 sidebar-content'>
+      <div className='close-icon' onClick={closeSideBar}>
+        <svg
+          className='w-6 h-6'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+            d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+          ></path>
+        </svg>
+      </div>
       <div className='avatar'>
         <img src={avatar} alt='anh dai dien' className='object-cover rounded-full w-18 h-18' />
         <div className='mt-4 name'>
