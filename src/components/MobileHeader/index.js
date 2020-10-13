@@ -1,10 +1,12 @@
 import React from 'react'
+import { useEffect } from 'react'
 import avatar from '../../assets/avatar.jpg'
+import './MobileHeader.css'
 
-export const MobileHeader = () => {
+export const MobileHeader = ({ toggle }) => {
   return (
     <div className='flex items-center px-3 py-2 mt-4 mobile-header bg-blue-1 rounded-2lg'>
-      <button className='mr-2 menu-icon'>
+      <button className='mr-2 menu-icon focus:outline-none' onClick={toggle}>
         <svg
           className='w-6 h-6'
           fill='none'
@@ -16,7 +18,10 @@ export const MobileHeader = () => {
         </svg>
       </button>
       <img src={avatar} alt='avatar' className='object-cover w-10 h-10 rounded-full' />
-      <span className='ml-2 text-2xl font-bold'>Tu Le Thanh</span>
+      <span className='ml-2 text-2xl font-bold'>
+        Tu Le Thanh
+        <span className='dot'></span>
+      </span>
     </div>
   )
 }

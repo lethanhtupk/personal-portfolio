@@ -1,3 +1,61 @@
 .sidebar {
   transform: translateX(-110%);
 }
+
+.sidebar-show {
+  animation: moveFromLeft 0.5s ease-in;
+}
+
+.sidebar-hidden {
+  transform: translateX(-110%);
+  animation: hideFromMiddle 0.5s ease-in;
+}
+
+.main-content {
+  transform: translateX(0);
+}
+
+.main-content-hidden {
+  transform: translateX(92%);
+  animation: moveFromMiddle 0.5s ease-in;
+}
+
+.main-content-show {
+  animation: moveFromRight 0.5s ease-in;
+}
+
+@keyframes moveFromMiddle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(92%);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(92%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideFromMiddle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}

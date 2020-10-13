@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import avatar from '../../assets/avatar.jpg'
+import './SideBar.css'
 
 export const SideBar = () => {
   const [currentItem, setCurrentItem] = useState('home')
@@ -7,20 +8,23 @@ export const SideBar = () => {
     setCurrentItem(e.target.name)
   }
   return (
-    <section className='shadow-2xl flex flex-col justify-between py-7.5 text-white rounded-2lg side-bar bg-blue-1 h-160 '>
-      <div className='avatar pl-7.5'>
+    <section className='shadow-2xl flex flex-col justify-between text-white rounded-2lg bg-blue-1 w-60.625 h-155 p-7.5'>
+      <div className='avatar'>
         <img src={avatar} alt='anh dai dien' className='object-cover rounded-full w-18 h-18' />
         <div className='mt-4 name'>
-          <p className='text-3xl font-bold '>Tu Le Thanh</p>
+          <p className='text-3xl font-bold '>
+            Tu Le Thanh
+            <span className='dot'></span>
+          </p>
           <p className='text-xs uppercase'>Web developer</p>
         </div>
       </div>
 
       <div className='navigation'>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'home' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'home' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -41,9 +45,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'about' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'about' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -64,9 +68,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'skills' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'skills' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -87,9 +91,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'experience' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'experience' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -112,9 +116,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'works' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'works' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -135,9 +139,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'blog' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'blog' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -158,9 +162,9 @@ export const SideBar = () => {
           </a>
         </div>
         <div
-          className={`flex items-center home pl-7.5 py-2 ${
-            currentItem === 'contact' ? 'border-red-1' : 'border-blue-1'
-          } border-l-4`}
+          className={`flex items-center home py-2 ${
+            currentItem === 'contact' ? 'current-item' : 'not-current-item'
+          } relative`}
         >
           <svg
             className='w-4 h-4'
@@ -181,7 +185,7 @@ export const SideBar = () => {
           </a>
         </div>
       </div>
-      <div className='flex flex-col pl-7.5'>
+      <div className='flex flex-col'>
         <div className='flex'>
           <div className='flex items-center justify-center w-8 h-8 rounded-full cursor-pointer facebook bg-red-1 hover:bg-white hover:text-red-1'>
             <i className='fab fa-facebook-f'></i>

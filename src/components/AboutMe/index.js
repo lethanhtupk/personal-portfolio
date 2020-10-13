@@ -1,13 +1,13 @@
 import React from 'react'
 import avatar from '../../assets/avatar.jpg'
 import avatar2 from '../../assets/avatar2.jpg'
+import './AboutMe.css'
 
 export const AboutMe = () => {
   return (
     <section className='flex flex-col mt-5 bg-white shadow-custom rounded-2lg px-10 pt-16.25 pb-15' id='about'>
       <div className='ml-2.5'>
-        <h3 className='text-2xl font-bold text-black capitalize'>About me</h3>
-        <span className='w-8 px-4 border-t-4 border-red-1'></span>
+        <h3 className='text-2xl font-bold text-black capitalize section-title'>About me</h3>
       </div>
       <div className='mt-17.5'>
         <div className='avatar'>
@@ -41,7 +41,7 @@ export const AboutMe = () => {
           <div className='mt-6 button'>
             <button className='flex items-center px-4 py-2 rounded-full bg-red-1'>
               <svg
-                class='w-4 h-4'
+                className='w-4 h-4'
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'

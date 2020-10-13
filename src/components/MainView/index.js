@@ -6,7 +6,10 @@ export const MainView = () => {
     <section className='flex flex-col justify-center mt-5 text-white shadow-custom rounded-2lg bg-blue-1 h-125'>
       <div className='px-5 py-4'>
         <div className='text-left info'>
-          <h1 className='text-4xl font-bold leading-h1'>Hi, I'm Tu</h1>
+          <h1 className='text-4xl font-bold leading-h1'>
+            Hi, I'm Tu
+            <span className='dot'></span>
+          </h1>
           <p className='mt-5 text-base'>
             I'm a web develope who have experience in web development with both backend and frontend side. I always try
             my best to learn as deep as I can whatever I used to learn in order to become an expert developer.
